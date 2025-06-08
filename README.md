@@ -63,8 +63,3 @@ Strong password
 ```
 
 ---
-
-## Notes
-
-- This is a basic checker and does not guarantee password security.
-- For real-world applications, consider using password strength libraries like `zxcvbn` or built-in password policies in authentication systems.
