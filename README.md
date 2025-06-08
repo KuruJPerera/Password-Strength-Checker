@@ -1,18 +1,70 @@
-This program is a Python password strength checker that evaluates a given password against six criteria. It calculates a score out of 6 and classifies the password as Weak, Moderate, or Strong based on the score. The check is performed in real time as the user inputs a password.
 
-The program is made up of one Python function: check_password_strength.
+# Password Strength Checker v3
 
-Check password strength:
+This Python script evaluates the strength of a user-provided password based on several criteria. It checks for length, character variety, and whether the password avoids using common weak terms. The script then outputs a score and classifies the password as Weak, Moderate, or Strong.
 
-. Checks if the password is at least 8 characters long.
-. Verifies presence of at least one lowercase letter.
-. Verifies presence of at least one uppercase letter.
-. Verifies presence of at least one digit.
-. Checks for special characters like !@#$%^&*(), etc.
-. Ensures the word "password" is not part of the input.
-. Each criterion met adds 1 point to the score. The final score determines the strength category printed to the user.
+---
 
-Usage:
+## What Does It Check?
 
-. Run the script and enter a password when prompted.
-. The program will evaluate the password and display a score out of 6 along with a strength label (Weak, Moderate, or Strong).
+The script evaluates passwords based on six key criteria:
+
+1. Minimum length of 8 characters  
+2. Contains at least one lowercase letter  
+3. Contains at least one uppercase letter  
+4. Contains at least one digit  
+5. Contains at least one special character (`!@#$%^&*()_+={}[]|:;'<>,.?/~``)  
+6. Does not include the word "password"
+
+Each satisfied criterion adds 1 point to the score, for a total of up to 6 points.
+
+---
+
+## Scoring System
+
+- **0–2 points** → Weak password  
+- **3–4 points** → Moderate password  
+- **5–6 points** → Strong password  
+
+The script prints both the numeric score and a strength label.
+
+---
+
+## Getting Started
+
+### Requirements
+
+- Python 3 installed  
+- A terminal or code editor for running the script
+
+If Python isn’t installed, you can download it here:  
+https://www.python.org/downloads/
+
+---
+
+## How to Use
+
+1. Save the script to a `.py` file (e.g., `password_checker.py`)  
+2. Open a terminal and run the script:  
+   ```bash
+   python password_checker.py
+   ```
+
+3. When prompted, enter a password for evaluation.
+
+---
+
+## Example Output
+
+```
+Enter a password: Hello@2024
+Password Strength Score: 6 /6
+Strong password
+```
+
+---
+
+## Notes
+
+- This is a basic checker and does not guarantee password security.
+- For real-world applications, consider using password strength libraries like `zxcvbn` or built-in password policies in authentication systems.
